@@ -1,4 +1,4 @@
-// ask_transmitter.pde
+// ask_transmitter
 // -*- mode: C++ -*-
 // Simple example of how to use RadioHead to transmit messages
 // with a simple ASK transmitter in a very simple way.
