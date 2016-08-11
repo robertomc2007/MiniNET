@@ -4,7 +4,7 @@ Presentación de modelo
 
 Conceptos básicos sobre redes de comunicación de datos
 
-Red cableada
+Red por radiofrecuencia
 
 Protocolos en redes
 
