@@ -9,15 +9,22 @@ RH_ASK driver;
 
 void setup()
 {
-    Serial.begin(9600);   // Debugging only
+    Serial.begin(115200);   // Debugging only
+    
+    pinMode(13, OUTPUT);
+    digitalWrite(13, LOW);
+    
     if (!driver.init())
-         Serial.println("init failed");
+    {
+         Serial.println("FALLA INICIO DRIVER");
+          digitalWrite(13, HIGH);
+    }
 }
 
 void loop()
 {
-    const char *msg = "hello";
+    const char *msg = "Esta es la voz de los marcianos...";
     driver.send((uint8_t *)msg, strlen(msg));
     driver.waitPacketSent();
-    delay(200);
+    delay(2000);
 }
