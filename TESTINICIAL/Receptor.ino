@@ -1,4 +1,4 @@
-// ask_receiver.pde
+// Receptor.ino
 // -*- mode: C++ -*-
 // Simple example of how to use RadioHead to receive messages
 // with a simple ASK transmitter in a very simple way.
@@ -9,9 +9,18 @@ RH_ASK driver;
 
 void setup()
 {
-    Serial.begin(9600); // Debugging only
+    Serial.begin(115200);   // Debugging only
+    
+    Serial.println("Receptor.ino");
+    
+    pinMode(13, OUTPUT);
+    digitalWrite(13, LOW);
+    
     if (!driver.init())
-         Serial.println("init failed");
+    {
+         Serial.println("FALLA INICIO DRIVER");
+          digitalWrite(13, HIGH);
+    }
 }
 
 void loop()
