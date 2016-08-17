@@ -1,4 +1,4 @@
-/* RADIOHEAD_TST_RXSensores
+/* UNO_RHDriver_RXSensores
 *  Arduino                         Transmitter
 *   GND------------------------------GND
 *   D12------------------------------Data
