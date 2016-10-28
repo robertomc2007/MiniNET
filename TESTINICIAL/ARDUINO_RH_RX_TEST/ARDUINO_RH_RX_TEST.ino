@@ -1,0 +1,42 @@
+// Receptor.ino
+// -*- mode: C++ -*-
+// Simple example of how to use RadioHead to receive messages
+// with a simple ASK transmitter in a very simple way.
+// Implements a simplex (one-way) receiver with an Rx-B1 module
+
+#include <RH_ASK.h>
+#include <SPI.h> // Not actualy used but needed to compile
+
+RH_ASK driver(2000, 5, 4);
+
+uint8_t buf[RH_ASK_MAX_MESSAGE_LEN];
+uint8_t buflen = sizeof(buf);
+
+void setup()
+{
+  Serial.begin(9600);   // Debugging only
+
+  Serial.println("Receptor.ino");
+  Serial.println(RH_ASK_MAX_MESSAGE_LEN);
+  
+  pinMode(13, OUTPUT);
+  digitalWrite(13, LOW);
+
+  if (!driver.init())
+  {
+    Serial.println("FALLA INICIO DRIVER");
+    digitalWrite(13, HIGH);
+  }
+}
+
+void loop()
+{
+  if (driver.recv(buf, &buflen)) // Non-blocking
+  {
+    // Message with a good checksum received, dump it.
+    driver.printBuffer("Vuelco:", buf, buflen);
+    Serial.println(buflen);
+    buf[buflen] = 0;
+    Serial.println((char *)buf);
+  }
+}
