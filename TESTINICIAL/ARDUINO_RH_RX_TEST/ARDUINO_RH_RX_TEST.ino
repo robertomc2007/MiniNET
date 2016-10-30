@@ -1,12 +1,20 @@
-// Receptor.ino
-// -*- mode: C++ -*-
-// Simple example of how to use RadioHead to receive messages
-// with a simple ASK transmitter in a very simple way.
-// Implements a simplex (one-way) receiver with an Rx-B1 module
+// RX_TEST
+//  Arduino                         Transmisor
+//   GND------------------------------GND
+//   D4-------------------------------Data
+//   Vin------------------------------VCC
+//
+//
+//  Arduino                         Receptor
+//   GND------------------------------GND
+//   D5-------------------------------Data
+//   5V-------------------------------VCC
+
 
 #include <RH_ASK.h>
 #include <SPI.h> // Not actualy used but needed to compile
 
+//bps,Rdatos,Tdatos
 RH_ASK driver(2000, 5, 4);
 
 uint8_t buf[RH_ASK_MAX_MESSAGE_LEN];
