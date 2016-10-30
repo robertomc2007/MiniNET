@@ -1,15 +1,8 @@
 // RHMASTER
-//  Arduino                         Transmisor
-//   GND------------------------------GND
-//   D4-------------------------------Data
-//   Vin------------------------------VCC
-//
-//
-//  Arduino                         Receptor
-//   GND------------------------------GND
-//   D5-------------------------------Data
-//   5V-------------------------------VCC
-
+// -*- mode: C++ -*-
+// Simple example of how to use RadioHead to transmit messages
+// with a simple ASK transmitter in a very simple way.
+// Implements a simplex (one-way) transmitter with an TX-C1 module
 #include <RH_ASK.h>
 #include <SPI.h> // Not actually used but needed to compile
 #include <RBD_Timer.h> // https://github.com/alextaujenis/RBD_Timer
@@ -17,7 +10,7 @@
 #define MAESTRO 10
 
 RH_ASK driver(1200, 5, 4);
-RBD::Timer timer;
+RBD::Timer timer, timersend;
 
 struct dataStruct {
   byte tipo;
@@ -33,7 +26,7 @@ byte tx_buf[RH_ASK_MAX_MESSAGE_LEN] = {0};
 
 boolean dump = false;
 boolean interroga = true;
-int maxesclavo = 3;
+int maxesclavo = 4;
 byte esclavo = 1;
 
 String salida = "";
@@ -53,7 +46,8 @@ void setup()
     digitalWrite(13, HIGH);
   }
   timer.setTimeout(1000);
-  timer.restart();
+  timersend.setTimeout(14000);
+  timersend.restart();
   //  tiempo = millis();
 }
 
@@ -61,7 +55,6 @@ void loop()
 {
 
   //Comandos via puerto serie
-
   if ( Serial.available()) {
 
     char ch = Serial.read();
@@ -137,8 +130,15 @@ void loop()
     }
   }
 
-  if (timer.onRestart()) {
+  if (timersend.onExpired()) {
+    // code only runs once per event
+    if (dump) {
+      Serial.println("Timer Send");
+    }
+    timer.restart();
+  }
 
+  if (timer.onRestart()) {
     // Envia mensaje de interrogacion
     DatosTipo1.tipo = 1;
     DatosTipo1.to = esclavo;
@@ -158,9 +158,11 @@ void loop()
 
     if (esclavo > maxesclavo) {
       esclavo = 1;
+      timer.stop();
+      timersend.restart();
       if (salida != "") {
         salida.setCharAt(salida.length() - 1, ' ');
-        Serial.println(salida);
+        Serial.println(salida); //Envia datos al GATEWAY
         salida = "";
       } else {
         if (dump) {

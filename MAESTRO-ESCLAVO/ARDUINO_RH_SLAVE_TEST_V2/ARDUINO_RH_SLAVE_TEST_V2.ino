@@ -1,14 +1,8 @@
 // RHSLAVE
-//  Arduino                         Transmisor
-//   GND------------------------------GND
-//   D4-------------------------------Data
-//   Vin------------------------------VCC
-//
-//
-//  Arduino                         Receptor
-//   GND------------------------------GND
-//   D5-------------------------------Data
-//   5V-------------------------------VCC
+// -*- mode: C++ -*-
+// Simple example of how to use RadioHead to receive messages
+// with a simple ASK transmitter in a very simple way.
+// Implements a simplex (one-way) receiver with an Rx-B1 module
 
 #include <RH_ASK.h>
 #include <SPI.h> // Not actualy used but needed to compile
