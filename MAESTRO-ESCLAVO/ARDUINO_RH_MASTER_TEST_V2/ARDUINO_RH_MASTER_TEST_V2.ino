@@ -1,8 +1,15 @@
 // RHMASTER
-// -*- mode: C++ -*-
-// Simple example of how to use RadioHead to transmit messages
-// with a simple ASK transmitter in a very simple way.
-// Implements a simplex (one-way) transmitter with an TX-C1 module
+//  Arduino                         Transmisor
+//   GND------------------------------GND
+//   D4-------------------------------Data
+//   Vin------------------------------VCC
+//
+//
+//  Arduino                         Receptor
+//   GND------------------------------GND
+//   D5-------------------------------Data
+//   5V-------------------------------VCC
+
 #include <RH_ASK.h>
 #include <SPI.h> // Not actually used but needed to compile
 #include <RBD_Timer.h> // https://github.com/alextaujenis/RBD_Timer
