@@ -1,4 +1,4 @@
-// Receptor.ino
+// RH_RX_STRUCT_TEST
 // -*- mode: C++ -*-
 // Simple example of how to use RadioHead to receive messages
 // with a simple ASK transmitter in a very simple way.
@@ -21,9 +21,9 @@ byte buflen = sizeof(buf);
 
 void setup()
 {
-  Serial.begin(9600);   // Debugging only
+  Serial.begin(115200);   // Debugging only
 
-  Serial.println("Receptor.ino");
+  Serial.println("RH_RX_STRUCT_TEST");
   Serial.println(RH_ASK_MAX_MESSAGE_LEN);
   
   pinMode(13, OUTPUT);
