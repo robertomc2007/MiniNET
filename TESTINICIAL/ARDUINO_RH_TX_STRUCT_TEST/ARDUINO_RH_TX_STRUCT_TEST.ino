@@ -1,4 +1,4 @@
-// Transmisor.ino
+// RH_TX_STRUCT_TEST
 // -*- mode: C++ -*-
 // Simple example of how to use RadioHead to transmit messages
 // with a simple ASK transmitter in a very simple way.
@@ -6,10 +6,10 @@
 #include <RH_ASK.h>
 #include <SPI.h> // Not actually used but needed to compile
 
-RH_ASK driver(2000, 5, 4);
-
 //AJUSTAR AL VALOR ADECUADO
-byte miid = 1;
+#define MIID 1
+
+RH_ASK driver(2000, 5, 4);
 
 unsigned long tiempo = 0;
 
@@ -26,7 +26,7 @@ void setup()
 {
   Serial.begin(9600);   // Debugging only
 
-  Serial.println("Transmisor.ino");
+  Serial.println("RH_TX_STRUCT_TEST");
   Serial.println(RH_ASK_MAX_MESSAGE_LEN);
   pinMode(13, OUTPUT);
   digitalWrite(13, LOW);
@@ -46,7 +46,7 @@ void loop()
   if (millis() - tiempo > 2000) {
     tiempo = millis();
     
-    DatosTipo1.id = miid;
+    DatosTipo1.id = MIID;
     
     DatosTipo1.dato = analogRead(A0);
     
