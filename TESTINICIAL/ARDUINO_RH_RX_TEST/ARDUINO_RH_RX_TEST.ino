@@ -24,7 +24,7 @@ void setup()
 {
   Serial.begin(9600);   // Debugging only
 
-  Serial.println("Receptor.ino");
+  Serial.println("RH_RX_TEST");
   Serial.println(RH_ASK_MAX_MESSAGE_LEN);
   
   pinMode(13, OUTPUT);
