@@ -6,4 +6,4 @@ Conceptos básicos sobre redes de comunicación de datos
 
 Red cableada
 
-Protocolos de redes
+Protocolos de red
