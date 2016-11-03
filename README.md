@@ -91,6 +91,12 @@ Como resultado de la práctica anterior se plantea el siguiente modelo para el t
 
 ![Modelo MiniNET](Modelo MiniNET.png)
 
+### PRACTICA Libreria RH
+
+[AIRSPAYCE RadioHead](http://www.airspayce.com/mikem/arduino/RadioHead/)
+
+------------------------------------------------------------------------------------------
+
 ## DETALLE DE MODELOS FORMALES
 
 ![dos](ositcp02.jpg)
@@ -98,7 +104,3 @@ Como resultado de la práctica anterior se plantea el siguiente modelo para el t
 ![alcances](alcancesOSITCP.gif)
 
 ![implementacion](implementacionOSITCP.png)
-
-### PRACTICA Libreria RH
-
-[AIRSPAYCE RadioHead](http://www.airspayce.com/mikem/arduino/RadioHead/)
