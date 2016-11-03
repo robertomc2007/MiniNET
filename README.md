@@ -67,11 +67,15 @@ Todas las técnicas bifase fuerzan al menos una transición por cada bit pudiend
 
 Los códigos bifase se usan con frecuencia en los esquemas de transmisión de datos. Unos de los más conocidos es el código Manchestes que se ha elegido como parte de la especificación de la normalización [IEEE 802.3](http://www.ieee802.org/3/) para la transmisión en redes LAN con un bus CSMA/CD usando cable coaxial en banda base o par trenzado. El Manchester Diferencial se ha elegido en  la normalización [IEEE 802.5](http://www.ieee802.org/5/www8025org/) para redes LAN en anillo con paso de testigo, en las que se usan pares trenzados apantallados.
 
-PRACTICA: Transmision y Recepcion de datos en un medio compartido con codificacion MANCHESTER
-
 ## Modelos OSI y TCP-UDP/IP
 
 ![uno](ositcp01.png)
+
+### PRACTICA NIVEL FISICO: Transmision y Recepcion de datos en un medio compartido con codificacion MANCHESTER
+
+
+
+
 
 ![dos](ositcp02.jpg)
 
