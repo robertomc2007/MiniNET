@@ -56,6 +56,8 @@ En sistemas basados en conmutación de paquetes la información/datos a ser tran
 
 ![modulosrf](modulos-433mhz.jpg)
 
+[ESPECIFICACIONES TECNICAS](MODULOS_DE_RF.pdf)
+
 ## MANCHESTER
 
 En la codificación Manchester, cada período de un bit se divide en dos intervalos iguales. Un bit binario de valor 1 se transmite con valor de tensión alto en el primer intervalo y un valor bajo en el segundo. Un bit 0 se envía al contrario, es decir, una tensión baja seguida de un nivel de tensión alto.
