@@ -6,11 +6,11 @@
 
 ## Comunicarse usando paquetes en vez de circuitos
 
-RED CONMUTADA POR CIRCUITOS
+### RED CONMUTADA POR CIRCUITOS
 
 Para establecer comunicación se debe efectuar una llamada y cuando se establece la conexión, los usuarios disponen de un enlace directo a través de los distintos segmentos de la red
 
-PASOS PARA ESTABLECER LA CONEXION
+#### PASOS PARA ESTABLECER LA CONEXION
 
 A) Establecimiento del circuito:
 
@@ -26,7 +26,7 @@ C) Desconexión del circuito:
 
 El nodo emisor o el receptor indican a su nodo más próximo que ha finalizado la conexión, y este nodo informa al siguiente de este hecho y luego LIBERA EL CANAL DEDICADO.
 
-RED CONMUTADA POR PAQUETES
+### RED CONMUTADA POR PAQUETES
 
 Un paquete es un grupo de información que consta de dos partes:
 
