@@ -48,6 +48,10 @@ Los sistemas de conmutación de circuitos son ideales para comunicaciones que re
 
 En sistemas basados en conmutación de paquetes la información/datos a ser transmitida previamente es ensamblada en paquetes. Cada paquete es entonces transmitido individualmente y éste puede seguir diferentes rutas hacia su destino. Una vez que los paquetes llegan a su destino, los paquetes son otra vez re-ensamblados. 
 
+## Modelos OSI y TCP-UDP/IP
+
+![uno](ositcp01.png)
+
 ## Medios compartidos y modulacion
 
 ## MANCHESTER
@@ -73,15 +77,7 @@ El Manchester Diferencial se ha elegido en  la normalización [IEEE 802.5](http:
 
 ![TokenRing](IEEE802_5_TokenRing.jpg)
 
-## Modelos OSI y TCP-UDP/IP
-
-![uno](ositcp01.png)
-
 ### PRACTICA NIVEL FISICO: Transmision y Recepcion de datos en un medio compartido con codificacion MANCHESTER
-
-
-
-
 
 ![dos](ositcp02.jpg)
 
