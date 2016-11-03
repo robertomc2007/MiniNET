@@ -52,6 +52,8 @@ En sistemas basados en conmutación de paquetes la información/datos a ser tran
 
 En la codificación Manchester, cada período de un bit se divide en dos intervalos iguales. Un bit binario de valor 1 se transmite con valor de tensión alto en el primer intervalo y un valor bajo en el segundo. Un bit 0 se envía al contrario, es decir, una tensión baja seguida de un nivel de tensión alto.
 
+![modulacion](MANCHESTER.gif)
+
 Este esquema asegura que todos los bits presentan una transición en la parte media, proporcionando así un excelente sincronismo entre el receptor y el transmisor. Una desventaja de este tipo de transmisión es que se necesita el doble del ancho de banda para la misma información que el método convencional.
 La codificación diferencial Manchester es una variación puesto que en ella, un bit de valor 1 se indica por la ausencia de transición al inicio del intervalo, mientras que un bit 0 se indica por la presencia de una transición en el inicio, existiendo siempre una transición en el centro del intervalo. El esquema diferencial requiere un equipo más sofisticado, pero ofrece una mayor inmunidad al ruido. El Manchester Diferencial tiene como ventajas adicionales las derivadas de la utilización de una aproximación diferencial.
 
@@ -65,6 +67,18 @@ Todas las técnicas bifase fuerzan al menos una transición por cada bit pudiend
 
 Los códigos bifase se usan con frecuencia en los esquemas de transmisión de datos. Unos de los más conocidos es el código Manchestes que se ha elegido como parte de la especificación de la normalización [IEEE 802.3](http://www.ieee802.org/3/) para la transmisión en redes LAN con un bus CSMA/CD usando cable coaxial en banda base o par trenzado. El Manchester Diferencial se ha elegido en  la normalización [IEEE 802.5](http://www.ieee802.org/5/www8025org/) para redes LAN en anillo con paso de testigo, en las que se usan pares trenzados apantallados.
 
+PRACTICA: Transmision y Recepcion de datos en un medio compartido con codificacion MANCHESTER
+
 ## Modelos OSI y TCP-UDP/IP
 
+![uno](ositcp01.png)
+
+![dos](ositcp02.jpg)
+
+![alcances](alcancesOSITCP.gif)
+
+![implementacion](implementacionOSITCP.png)
+
 ## Libreria RH
+
+[AIRSPAYCE RadioHead](http://www.airspayce.com/mikem/arduino/RadioHead/)
