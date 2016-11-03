@@ -83,7 +83,13 @@ El Manchester Diferencial se ha elegido en la normalización [IEEE 802.5](http:/
 
 [LIBRERIA MANCHESTER](https://github.com/mchr3k/arduino-libs-manchester/)
 
-## DETALLE DE MODELOS
+## MODELO MiniNET
+
+Como resultado de la práctica anterior se plantea el siguiente modelo para el tratamiento uniforme de las comunicaciones simples
+
+![Modelo MiniNET](Modelo MiniNET.png)
+
+## DETALLE DE MODELOS FORMALES
 
 ![dos](ositcp02.jpg)
 
