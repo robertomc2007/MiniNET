@@ -50,6 +50,21 @@ En sistemas basados en conmutación de paquetes la información/datos a ser tran
 
 ## MANCHESTER
 
+En la codificación Manchester, cada período de un bit se divide en dos intervalos iguales. Un bit binario de valor 1 se transmite con valor de tensión alto en el primer intervalo y un valor bajo en el segundo. Un bit 0 se envía al contrario, es decir, una tensión baja seguida de un nivel de tensión alto.
+
+Este esquema asegura que todos los bits presentan una transición en la parte media, proporcionando así un excelente sincronismo entre el receptor y el transmisor. Una desventaja de este tipo de transmisión es que se necesita el doble del ancho de banda para la misma información que el método convencional.
+La codificación diferencial Manchester es una variación puesto que en ella, un bit de valor 1 se indica por la ausencia de transición al inicio del intervalo, mientras que un bit 0 se indica por la presencia de una transición en el inicio, existiendo siempre una transición en el centro del intervalo. El esquema diferencial requiere un equipo más sofisticado, pero ofrece una mayor inmunidad al ruido. El Manchester Diferencial tiene como ventajas adicionales las derivadas de la utilización de una aproximación diferencial.
+
+Todas las técnicas bifase fuerzan al menos una transición por cada bit pudiendo tener hasta dos en ese mismos periodo. Por tanto, la máxima velocidad de modulación es el doble que en los NRZ, esto significa que el ancho de bandoa necesario es mayor. No obstante, los  esquemas bifase tienes varias ventajas:
+
+* Sincronización : debido a la transición que siempre ocurre durante el intervalo de duración correspondiente a un bit, el receptor puede sincronizarse usando dicha transición. Debido a esta característica, los códigos bifase se denominan auto-sincronizados.
+
+* No tienen componente en continua.
+
+* Detección de errores: se pueden detectar errores si se detecta una ausencia de la transición esperada en la mitad del intervalo. Para que el ruido produjera un error no detectado tendría que intervenir la señal antes y después de la transición.
+
+Los códigos bifase se usan con frecuencia en los esquemas de transmisión de datos. Unos de los más conocidos es el código Manchestes que se ha elegido como parte de la especificación de la normalización [IEEE 802.3](http://www.ieee802.org/3/) para la transmisión en redes LAN con un bus CSMA/CD usando cable coaxial en banda base o par trenzado. El Manchester Diferencial se ha elegido en  la normalización [IEEE 802.5](http://www.ieee802.org/5/www8025org/) para redes LAN en anillo con paso de testigo, en las que se usan pares trenzados apantallados.
+
 ## Modelos OSI y TCP-UDP/IP
 
 ## Libreria RH
