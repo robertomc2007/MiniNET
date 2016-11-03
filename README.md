@@ -81,12 +81,16 @@ El Manchester Diferencial se ha elegido en la normalización [IEEE 802.5](http:/
 
 ### PRACTICA NIVEL FISICO: Transmision y Recepcion de datos en un medio compartido con codificacion MANCHESTER
 
+[LIBRERIA MANCHESTER](https://github.com/mchr3k/arduino-libs-manchester/)
+
+## DETALLE DE MODELOS
+
 ![dos](ositcp02.jpg)
 
 ![alcances](alcancesOSITCP.gif)
 
 ![implementacion](implementacionOSITCP.png)
 
-## Libreria RH
+### PRACTICA Libreria RH
 
 [AIRSPAYCE RadioHead](http://www.airspayce.com/mikem/arduino/RadioHead/)
