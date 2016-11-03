@@ -52,7 +52,7 @@ En sistemas basados en conmutación de paquetes la información/datos a ser tran
 
 ![uno](ositcp01.png)
 
-## Medios compartidos y modulacion
+## NIVEL FÍSICO: Medios compartidos y codificación (modulación)
 
 ## MANCHESTER
 
