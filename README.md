@@ -1,13 +1,13 @@
 # MiniNET
 
-Presentación de modelo
+## Presentación de modelo
 
-Comunicarse usando paquetes en vez de circuitos
+## Comunicarse usando paquetes en vez de circuitos
 
-Medios compartidos y modulacion
+## Medios compartidos y modulacion
 
-MANCHESTER
+## MANCHESTER
 
-Modelos OSI y TCP-UDP/IP
+## Modelos OSI y TCP-UDP/IP
 
-Libreria RH
+## Libreria RH
