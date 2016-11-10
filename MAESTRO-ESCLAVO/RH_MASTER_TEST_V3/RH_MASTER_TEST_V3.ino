@@ -235,7 +235,7 @@ void SendDatos()
   DatosTipo.dato = 0.0;
   //DatosTipo.contador = millis();
 
-  if (dump)
+  if (muestra)
   {
     sprintf(tx_buf, "ENVIA MENSAJE tipo=%d destino=%d via=%d", DatosTipo.tipo, DatosTipo.to, DatosTipo.hope);
     Serial.println((char *)tx_buf);
