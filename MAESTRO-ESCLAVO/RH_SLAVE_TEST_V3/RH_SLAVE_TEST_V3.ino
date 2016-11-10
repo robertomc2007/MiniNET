@@ -60,9 +60,7 @@ void loop()
         {
           dump = !dump;
           if (dump)
-            Serial.println(F("VUELCO"));
-          else
-            Serial.println(F("SIN VUELCO"));
+          Serial.print("VUELCO "); Serial.println(dump ? "SI" : "NO");
           break;
         }
 
@@ -98,7 +96,8 @@ void loop()
   
   if (driver.recv(buf, &buflen)) // Non-blocking
   {
-    // Mensaje con checksum recibido.
+    //Mensaje con checksum recibido.
+    Serial.println(F("MENSAJE RECIBIDO")); 
     memcpy(&DatosTipo, buf, sizeof(DatosTipo));
 
     if (dump) {
@@ -160,7 +159,7 @@ void loop()
         }//PONG
 
       }//PARA MI
-      else //RUTEO
+      else //NO ES PARA MI -> RUTEO
       {
 
         if (DatosTipo.tipo == 1) //RUTEA INTERROGA
@@ -224,7 +223,7 @@ void SendMISDatos() {
 
 void SendDatos() {
 
-  sprintf(tx_buf, "ENVIA MENSAJE tipo=%d destino=%d via=%d", DatosTipo.tipo, DatosTipo.to, DatosTipo.hope);
+  sprintf(tx_buf, "ENVIA MENSAJE tipo=%d origen=%d destino=%d via=%d", DatosTipo.tipo, DatosTipo.from, DatosTipo.to, DatosTipo.hope);
   Serial.println((char *)tx_buf);
 
   memcpy(tx_buf, &DatosTipo, sizeof(DatosTipo));
