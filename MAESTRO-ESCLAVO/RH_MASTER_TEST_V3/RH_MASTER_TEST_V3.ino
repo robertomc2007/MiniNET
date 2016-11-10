@@ -123,9 +123,7 @@ void loop()
       //help
       case '?':
         {
-          Serial.println(F("\n\rs: estado y parametros\n\rk: clave TS\n\rn: #canal TS\n\ri: nombre WiFi\n\rp: clave WiFi"));
-          Serial.println(F("w: conecta WiFi\n\ra: desconecta y lista redes\n\ru: activa/des upload\n\rc: #campo TS (1-7)\n\rv: valor en campo TS (float)"));
-          Serial.println(F("r: reset\n\rf: guarda config.json\n\rd: activa/des debug\n\r"));
+          Serial.println(F("\n\rt: TIMERS\n\rpnn: PING\n\rinn: INTERROGA\n\rm: MUESTRA\n\rd: DUMP\n\renn: MAXIMO ESCLAVO"));
           break;
         }
     }
