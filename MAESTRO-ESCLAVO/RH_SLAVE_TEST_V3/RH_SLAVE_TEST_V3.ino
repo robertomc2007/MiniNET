@@ -85,6 +85,12 @@ void loop()
           SendDatos();
           break;
         }
+      //help
+      case '?':
+        {
+          Serial.println(F("\n\rpnn: PING\n\rd: DUMP"));
+          break;
+        }
     }// swith
   }
 
